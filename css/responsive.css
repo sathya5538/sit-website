@@ -116,7 +116,7 @@ display: flex; /* Ensures visibility when active */
 
 .nav-menu a {
         display: block;
-        padding: 18px 0;
+        padding: 12px 0;
         font-size: 20px;
         font-weight: 600;      /* Heavier weight like premium brands */
         color: #0a2540;        /* Use your dark navy brand color */
