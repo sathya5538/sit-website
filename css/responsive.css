@@ -1,7 +1,9 @@
-/* =====================================
-TABLET RESPONSIVE (max-width:992px)
-===================================== */
 
+/* =====================================
+   RESPONSIVE STYLES (Match Design)
+   ===================================== */
+
+/* TABLET (max-width:992px) */
 @media (max-width:992px){
 
 .container{
@@ -61,90 +63,16 @@ grid-template-columns:1fr;
 .footer-grid{
 grid-template-columns:repeat(2,1fr);
 }
-
 }
 
 
-/* =====================================
-MOBILE RESPONSIVE (max-width:768px)
-===================================== */
-
+/* MOBILE (max-width:768px) */
 @media (max-width:768px){
 
 .navbar{
 flex-direction:column;
 gap:15px;
 }
-
-
-
-@media (max-width:768px){
-
-.menu-toggle{
-    display:block;
-    font-size:28px;
-    cursor:pointer;
-    z-index:1101;
-}
-
-/* SIDE MENU */
-.nav-menu{
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 75%;
-    max-width: 300px;
-    height: 100vh;
-
-    background: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 25px;
-
-    transition: right 0.3s ease;
-
-    z-index:1100;
-}
-
-/* OPEN */
-.nav-menu.active{
-    right: 0;
-}
-
-/* OVERLAY */
-.nav-overlay{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-
-    background: rgba(0,0,0,0.4);
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:0.3s;
-    z-index:1000;
-}
-
-.nav-overlay.active{
-    opacity:1;
-    visibility:visible;
-}
-
-}
-
-
-
-
-
-
-/* ✅ FIXED MOBILE NAV */
 
 .menu-toggle{
 display:block;
@@ -153,38 +81,30 @@ cursor:pointer;
 z-index:1100;
 }
 
-.nav-container{
-position:relative;
-}
-
 body.menu-open{
-    overflow: hidden;
+overflow:hidden;
 }
 
 .nav-menu{
 position:fixed;
 top:0;
 right:-100%;
-width:75%;     
-max-width: 300px;     /* ✅ FULL SCREEN FIX */
+width:75%;
+max-width:300px;
 height:100vh;
-
 background:white;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
 gap:25px;
-
 transition:0.35s ease;
-
 z-index:1050;
 }
 
 .nav-menu.active{
 right:0;
+display: flex; /* Ensures visibility when active */
 }
 
 .nav-menu li{
@@ -197,7 +117,23 @@ font-weight:500;
 color:#222;
 }
 
-/* OTHER MOBILE STYLES */
+.nav-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+opacity:0;
+visibility:hidden;
+transition:0.3s;
+z-index:1000;
+}
+
+.nav-overlay.active{
+opacity:1;
+visibility:visible;
+}
 
 .hero{
 padding:60px 0;
@@ -215,26 +151,11 @@ font-size:16px;
 font-size:28px;
 }
 
-.services-grid{
-grid-template-columns:1fr;
-}
-
-.process-grid{
-grid-template-columns:1fr;
-}
-
-.stats-grid{
-grid-template-columns:1fr;
-}
-
-.why-grid{
-grid-template-columns:1fr;
-}
-
-.portfolio-grid{
-grid-template-columns:1fr;
-}
-
+.services-grid,
+.process-grid,
+.stats-grid,
+.why-grid,
+.portfolio-grid,
 .footer-grid{
 grid-template-columns:1fr;
 }
@@ -255,14 +176,9 @@ width:100%;
 .logo img{
 height:60px;
 }
-
 }
 
-
-/* =====================================
-SMALL MOBILE (max-width:480px)
-===================================== */
-
+/* SMALL MOBILE (max-width:480px) */
 @media (max-width:480px){
 
 .hero-text h1{
@@ -291,5 +207,4 @@ height:180px;
 .logo img{
 height:50px;
 }
-
 }
