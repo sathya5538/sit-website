@@ -89,13 +89,14 @@ overflow:hidden;
 position:fixed;
 top:0;
 right:-100%;
-width:75%;
+width:80%;
 max-width:300px;
 height:100vh;
 background:white;
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start;
+padding: 100px 40px;
 align-items:center;
 gap:25px;
 transition:0.35s ease;
@@ -107,15 +108,39 @@ right:0;
 display: flex; /* Ensures visibility when active */
 }
 
-.nav-menu li{
-margin:0;
-}
+.nav-menu li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Divider lines */
+    }
 
-.nav-menu a{
-font-size:20px;
-font-weight:500;
-color:#222;
-}
+.nav-menu a {
+        display: block;
+        padding: 18px 0;
+        font-size: 20px;
+        font-weight: 600;      /* Heavier weight like premium brands */
+        color: #0a2540;        /* Use your dark navy brand color */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+        color: #0066ff;
+        padding-left: 10px;    /* Subtle slide effect on hover */
+    }
+
+    /* Add a "Menu" label at the top (Optional visual polish) */
+    .nav-menu::before {
+        content: "NAVIGATION";
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #888;
+        letter-spacing: 2px;
+    }
 
 .nav-overlay{
 position:fixed;
